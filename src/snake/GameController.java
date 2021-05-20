@@ -11,10 +11,7 @@ import javax.swing.Timer;
 /**
  * This class will construct the visual and controlling environment for the game, setting the instructions
  * to control the snake as well as the conditions for playing and finishing the game.
- * @param snakeGameModel to initiate the model
- * @param snakeView to initiate the view
- * @param npanel for the northern view to be initiated
- * @param spanel for the southern view to be initiated
+ * 
  */
 class GameController {
     private final GameModel snakeGameModel;
@@ -26,6 +23,10 @@ class GameController {
     
     /**
      * Constructor for the class, including external elements to build the interface.
+     * @param snakeGameModel to initiate the model
+     * @param snakeView to initiate the view
+     * @param npanel for the northern view to be initiated
+     * @param spanel for the southern view to be initiated
      */
     public GameController(GameModel snakeGameModel, GameView snakeView, NorthGamePanel npanel, SouthGamePanel spanel) {
         this.snakeGameModel = snakeGameModel;
@@ -75,7 +76,6 @@ class GameController {
         southpanel.setScoreLabel(snakeGameModel.getCurrentScore());
         southpanel.setHighScoreLabel(snakeGameModel.getHighScore());
 
-       // southpanel.setLivesLabel(snakeGameModel.getCurrentLive());
         
         if (!snakeGameModel.getPlayingMode()) {
             stopTime();
