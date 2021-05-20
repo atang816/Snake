@@ -3,7 +3,7 @@ package snake;
 import java.awt.geom.Ellipse2D;
 
 
- enum CellType{
+ enum CellType {
     NONE, SNAKE, APPLE}
 
 class Cell {
@@ -11,25 +11,25 @@ class Cell {
     private Ellipse2D.Double circle = new Ellipse2D.Double();
     
     /**
-	 * Default Constructor for Cell.
-	 * @param name for name of animal.
-	 */    
+     * Default Constructor for Cell.
+     * @param name for name of animal.
+     */    
     public Cell() {this.cellType = CellType.NONE;}
     
    
     /**
-	 * Non-Constructor for Cell that specifies what type of component is in a cell.
-	 * @param int type what is in a cell.
-	 */
+     * Non-Constructor for Cell that specifies what type of component is in a cell.
+     * @param int type what is in a cell.
+     */
     public Cell(int type){
         
         setCellType(type);
     }
     
     /**
-	 * setCellType that sets what type of component is in a cell.
-	 * @param int type what is in a cell.(0 = none, 1 = snake, 2 = apple)
-	 */
+     * setCellType that sets what type of component is in a cell.
+     * @param int type what is in a cell.(0 = none, 1 = snake, 2 = apple)
+     */
     public void setCellType(int i){
         switch (i) {
             case 0:
@@ -45,8 +45,8 @@ class Cell {
     }
     
     /**
-	 * getCellType retrieve what type of component is in a cell. (0 = none, 1 = snake, 2 = apple)
-	 */
+     * getCellType retrieve what type of component is in a cell. (0 = none, 1 = snake, 2 = apple)
+     */
     public int getCellType(){
         switch(cellType){
             default: //if NONE
@@ -59,35 +59,36 @@ class Cell {
     }
     
     /**
-	 * isSnake to retrieve if the cell has a snake component. 
-	 */
+     * isSnake to retrieve if the cell has a snake component. 
+     */
     public boolean isSnake(){
         return cellType.equals(CellType.SNAKE);
     }
     
     /**
-	 * isApple to retrieve if the cell has an apple component. 
-	 */
+     * isApple to retrieve if the cell has an apple component. 
+     */
     public boolean isApple(){
         return cellType.equals(CellType.APPLE);
     }
     
     /**
-	 * isNone to retrieve if the cell has nothing. 
-	 */
+     * isNone to retrieve if the cell has nothing. 
+     */
     public boolean isNone(){
         return cellType.equals(CellType.NONE);
     }
     
     /**
-	 * setCircle to set each grid cell to a circle. 
-	 */
+     * setCircle to set each grid cell to a circle. 
+     */
     public void setCircle(double x, double y, double w, double h){
         circle.setFrame(x, y, w, h);
     }
+	
     /**
-	 * getCircle to get each grid circle cell. 
-	 */
+     * getCircle to get each grid circle cell. 
+     */
     public Ellipse2D getCircle(){return circle;}
 
 }
