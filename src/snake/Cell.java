@@ -2,10 +2,16 @@ package snake;
 
 import java.awt.geom.Ellipse2D;
 
-
+/**
+ * Enum with values that represent what can be within a cell of the grid
+ *
+ */
  enum CellType {
     NONE, SNAKE, APPLE}
-
+/**
+  * Class Cell will keep track of what is in the grid of the game
+  *
+  */
 class Cell {
     private CellType cellType;
     private Ellipse2D.Double circle = new Ellipse2D.Double();
