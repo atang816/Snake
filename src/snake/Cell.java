@@ -18,7 +18,7 @@ class Cell {
     
     /**
      * Default Constructor for Cell.
-     * @param name for name of animal.
+     * 
      */    
     public Cell() {this.cellType = CellType.NONE;}
     
@@ -87,6 +87,10 @@ class Cell {
     
     /**
      * setCircle to set each grid cell to a circle. 
+     * @param x for the x coordinate to set circle
+     * @param y for the y coordinate to set circle
+     * @param w for the width of the circle
+     * @param h for the height of the circle
      */
     public void setCircle(double x, double y, double w, double h){
         circle.setFrame(x, y, w, h);
