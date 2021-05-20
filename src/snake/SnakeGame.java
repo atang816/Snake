@@ -5,7 +5,10 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
-
+/**
+ * SnakeGame Class that will run the snake game in main method
+ *
+ */
 public class SnakeGame {
 
     public static void main(String[] args) {
@@ -26,7 +29,10 @@ public class SnakeGame {
     }
     
 }
-
+/**
+ * GameFrame class that will initialize the views, models, and controller.
+ *
+ */
 class GameFrame extends JFrame{
     
     private GameModel snakeModel;
