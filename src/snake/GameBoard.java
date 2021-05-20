@@ -9,13 +9,11 @@ public class GameBoard extends JFrame{
     private GameModel snakeModel;
     
     
-
+    /**
+     * This GameBoard Constructor will add all componenets of the game into this GameBoard for 
+     * the Composite Design Pattern.
+     */
     public GameBoard() {
-        
-    	/*This GameBoard Constructor will add all componenets of the game into this GameBoard for 
-    	 the Composite Design Pattern.*/
-       
-        
         snakeModel = new GameModel();
         
         //Components that will be added:
