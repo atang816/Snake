@@ -11,6 +11,10 @@ import javax.swing.Timer;
 /**
  * This class will construct the visual and controlling environment for the game, setting the instructions
  * to control the snake as well as the conditions for playing and finishing the game.
+ * @param snakeGameModel to initiate the model
+ * @param snakeView to initiate the view
+ * @param npanel for the northern view to be initiated
+ * @param spanel for the southern view to be initiated
  */
 class GameController {
     private final GameModel snakeGameModel;
@@ -158,11 +162,17 @@ class GameController {
         });
         
     }
-    
+     /**
+     * Stop the timer of the game running
+     *
+     */
     private void stopTime() {
         if(gameTimer != null){gameTimer.stop();} 
     }
-    
+    /**
+     * Initiate game timer when game starts
+     *
+     */
     private void startGame() {
         gameTimer = new Timer(100, new ActionListener() {
             @Override
@@ -172,7 +182,10 @@ class GameController {
         });
         gameTimer.start();
     }
-    
+    /**
+     * Method to keep track of the game running and stop when snake is dead
+     *
+     */
     private void startOneStepThread() {
         new Thread(new Runnable() {
             @Override
